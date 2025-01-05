@@ -10,13 +10,13 @@ const appTranslations: Translations = {
 };
 
 const someVar1 = "ua";
-console.log(appTranslations[someVar1]); // "Привіт"
+console.log(appTranslations[someVar1]);    // "Привіт"
 
 const someVar2 = "es";
-console.log(appTranslations[someVar2]); // "Hola"
+console.log(appTranslations[someVar2]);    // "Hola"
 
-const translation = appTranslations["de"]; // у меня почему-то нет поредупреждения про undefined...
-console.log(translation); // undefined
+const translation = appTranslations["de"]; // у меня почему-то нет предупреждения про undefined (хотя в tsconfig нужные флаги вроде установил)...
+console.log(translation);                  // undefined
 
 interface OptionalTranslations extends Translations {
     default?: string;
